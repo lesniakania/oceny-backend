@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  pool: 11
+  timeout: 5000
+
+development:
+  <<: *default
+  database: oceny_development
+
+test:
+  <<: *default
+  database: oceny_test
+
+production:
+  <<: *default
+  database: oceny_production

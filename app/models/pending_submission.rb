@@ -1,0 +1,2 @@
+class PendingSubmission < BaseSubmission
+end

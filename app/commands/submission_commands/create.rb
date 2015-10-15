@@ -1,5 +1,5 @@
 module SubmissionCommands
-  class Create < ROM::Commands::Create[:sql]
+  class Create < ::BaseCreateCommand
     relation :submissions
     register_as :create
     result :one

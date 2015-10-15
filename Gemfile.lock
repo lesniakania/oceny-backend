@@ -73,6 +73,8 @@ GEM
     diff-lcs (1.2.5)
     equalizer (0.0.11)
     erubis (2.7.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
     ffi (1.9.10)
     formatador (0.2.5)
     globalid (0.3.6)
@@ -240,6 +242,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  factory_girl
   guard-rspec
   guard-rubocop
   pg

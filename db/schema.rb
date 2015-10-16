@@ -11,18 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151015135628) do
+ActiveRecord::Schema.define(version: 20151016074824) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "marks", force: :cascade do |t|
+    t.integer  "value"
+    t.integer  "submission_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "marks", ["submission_id"], name: "index_marks_on_submission_id", using: :btree
 
   create_table "submissions", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "mark"
     t.string   "reason"
   end
 
+  add_foreign_key "marks", "submissions"
 end

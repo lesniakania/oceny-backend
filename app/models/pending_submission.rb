@@ -1,2 +1,0 @@
-class PendingSubmission < BaseSubmission
-end
